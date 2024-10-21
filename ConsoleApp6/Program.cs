@@ -10,12 +10,20 @@ namespace ConsoleApp6
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello world");
-            sloz(4, 6);
+            int num = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(reverse(num));
         }
-        static void sloz(int a, int b)
+        public static int reverse(int num)
         {
-            Console.WriteLine(a + ", " + b);
+            int revnum = 0;
+
+            while (num != 0)
+            {
+                revnum = revnum * 10 + num % 10;
+                num = num / 10;
+            }
+
+            return revnum;
         }
     }
 }
