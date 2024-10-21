@@ -13,12 +13,17 @@ namespace ConsoleApp6
             int num = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine(reverse(num));
         }
-        public static int reverse(int num)
+        public static int reverse(int num, int revnum = 0)
         {
             if (num == 0)
-                return 0;
+            {
+                return revnum;
+            }
             else
-                return (num % 10) + 10 * reverse(num / 10);
+            {
+                revnum = (revnum * 10) + (num % 10);
+                return reverse(num / 10, revnum);
+            }
         }
     }
 }
