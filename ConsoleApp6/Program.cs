@@ -10,6 +10,12 @@ namespace ConsoleApp6
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hello world");
+            sloz(4, 6);
+        }
+        static void sloz(int a, int b)
+        {
+            Console.WriteLine(a + ", " + b);
         }
     }
 }
