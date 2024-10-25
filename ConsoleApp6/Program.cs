@@ -30,6 +30,8 @@ namespace ConsoleApp6
             }
         }
 
+        //Если вводится числа 0 или 1, то возвращается это же число - 0 или 1.
+        //Иначе возвращается результат выражения Fibonachi(n - 1) + Fibonachi(n - 2);
         public static int fibonachi(int num)
         {
             if (num == 0 || num == 1) return num;
