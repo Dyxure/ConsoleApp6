@@ -11,20 +11,16 @@ namespace ConsoleApp6
         static void Main(string[] args)
         {
             Console.WriteLine("Введите число:");
-            int num = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(reverse(num));
+            int fibnum = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Число Фибоначчи:{fibonachi(fibnum)}");
         }
-        public static int reverse(int num, int revnum = 0)
+        //Если вводится числа 0 или 1, то возвращается это же число - 0 или 1.
+        //Иначе возвращается результат выражения Fibonachi(n - 1) + Fibonachi(n - 2);
+        public static int fibonachi(int num)
         {
-            if (num == 0)
-            {
-                return revnum;
-            }
-            else
-            {
-                revnum = (revnum * 10) + (num % 10);
-                return reverse(num / 10, revnum);
-            }
+            if (num == 0 || num == 1) return num;
+
+            return fibonachi(num - 1) + fibonachi(num - 2);
         }
     }
 }
