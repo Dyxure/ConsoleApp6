@@ -12,7 +12,7 @@ namespace ConsoleApp6
         {
             Console.WriteLine("Введите число:");
             int num = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(reverse(num));
+            Console.WriteLine($"Число:{ reverse(num)}");
         }
         public static int reverse(int num, int revnum = 0)
         {
